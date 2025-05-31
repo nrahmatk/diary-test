@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wisatadiary.vercel.app/sitemap.xml
+
+# SEO optimizations
+Crawl-delay: 1
+
+# Allow all content paths
+Allow: /detail/
+Allow: /api/
+
+# Cache headers for better crawling
+# robots.txt itself doesn't set cache headers, but this is documentation for server config

@@ -1,0 +1,427 @@
+@import "tailwindcss";
+
+/* Modern Design System - Elegant Color Palette */
+:root {
+  /* Light Theme - Elegant and Eye-friendly */
+  --background: 252 252 253; /* Near white with subtle warmth */
+  --background-secondary: 248 249 250; /* Subtle gray background */
+  --background-tertiary: 244 245 247; /* Deeper background for cards */
+
+  --foreground: 16 24 40; /* Rich dark blue-gray */
+  --foreground-secondary: 71 85 105; /* Medium gray */
+  --foreground-tertiary: 148 163 184; /* Light gray */
+
+  --surface: 255 255 255; /* Pure white for elevated surfaces */
+  --border: 226 232 240; /* Subtle border color */
+
+  /* Primary Brand Colors - Sophisticated Blue */
+  --primary: 59 130 246; /* Modern blue */
+  --primary-hover: 37 99 235; /* Darker blue for hover */
+  --primary-light: 147 197 253; /* Light blue accent */
+  --primary-dark: 29 78 216; /* Deep blue */
+
+  /* Accent Colors - Modern Palette */
+  --accent-blue: 99 102 241; /* Indigo */
+  --accent-purple: 139 92 246; /* Purple */
+  --accent-pink: 236 72 153; /* Pink */
+  --accent-yellow: 245 158 11; /* Amber */
+  --accent-green: 34 197 94; /* Emerald */
+  --accent-orange: 249 115 22; /* Orange */
+
+  /* Status Colors */
+  --success: 34 197 94; /* Green */
+  --warning: 245 158 11; /* Amber */
+  --error: 239 68 68; /* Red */
+  --info: 59 130 246; /* Blue */
+}
+
+/* Dark Theme - Warm and Eye-friendly */
+.dark {
+  --background: 15 23 42; /* Deep slate, not pure black */
+  --background-secondary: 30 41 59; /* Warmer dark gray */
+  --background-tertiary: 51 65 85; /* Medium dark surface */
+
+  --foreground: 248 250 252; /* Soft white */
+  --foreground-secondary: 203 213 225; /* Light gray */
+  --foreground-tertiary: 148 163 184; /* Medium gray */
+
+  --surface: 30 41 59; /* Elevated surface color */
+  --border: 51 65 85; /* Subtle dark border */
+
+  /* Primary colors adjusted for dark mode */
+  --primary: 96 165 250; /* Lighter blue */
+  --primary-hover: 59 130 246; /* Standard blue */
+  --primary-light: 147 197 253; /* Light blue */
+  --primary-dark: 37 99 235; /* Darker blue */
+
+  /* Accent colors - brighter for dark mode */
+  --accent-blue: 129 140 248; /* Lighter indigo */
+  --accent-purple: 167 139 250; /* Lighter purple */
+  --accent-pink: 244 114 182; /* Lighter pink */
+  --accent-yellow: 251 191 36; /* Lighter amber */
+  --accent-green: 52 211 153; /* Lighter emerald */
+  --accent-orange: 251 146 60; /* Lighter orange */
+
+  /* Status colors for dark mode */
+  --success: 52 211 153; /* Lighter green */
+  --warning: 251 191 36; /* Lighter amber */
+  --error: 248 113 113; /* Lighter red */
+  --info: 96 165 250; /* Lighter blue */
+}
+@layer utilities {
+  /* Background utilities */
+  .bg-background {
+    background-color: rgb(var(--background));
+  }
+  .bg-background-secondary {
+    background-color: rgb(var(--background-secondary));
+  }
+  .bg-background-tertiary {
+    background-color: rgb(var(--background-tertiary));
+  }
+  .bg-surface {
+    background-color: rgb(var(--surface));
+  }
+
+  /* Foreground/Text utilities */
+  .text-foreground {
+    color: rgb(var(--foreground));
+  }
+  .text-foreground-secondary {
+    color: rgb(var(--foreground-secondary));
+  }
+  .text-foreground-tertiary {
+    color: rgb(var(--foreground-tertiary));
+  }
+
+  /* Border utilities */
+  .border-border {
+    border-color: rgb(var(--border));
+  }
+
+  /* Primary color utilities */
+  .bg-primary {
+    background-color: rgb(var(--primary));
+  }
+  .text-primary {
+    color: rgb(var(--primary));
+  }
+  .border-primary {
+    border-color: rgb(var(--primary));
+  }
+
+  .hover\:bg-primary-hover:hover {
+    background-color: rgb(var(--primary-hover)) !important;
+  }
+  .hover\:text-primary-hover:hover {
+    color: rgb(var(--primary-hover));
+  }
+  .hover\.border-primary-hover:hover {
+    border-color: rgb(var(--primary-hover));
+  }
+  .hover\:bg-surface-hover:hover {
+    background-color: rgb(var(--surface-hover)) !important;
+  }
+
+  .bg-primary-light {
+    background-color: rgb(var(--primary-light));
+  }
+  .text-primary-light {
+    color: rgb(var(--primary-light));
+  }
+  .border-primary-light {
+    border-color: rgb(var(--primary-light));
+  }
+
+  .bg-primary-dark {
+    background-color: rgb(var(--primary-dark));
+  }
+  .text-primary-dark {
+    color: rgb(var(--primary-dark));
+  }
+  .border-primary-dark {
+    border-color: rgb(var(--primary-dark));
+  }
+
+  /* Accent color utilities */
+  .bg-accent-blue {
+    background-color: rgb(var(--accent-blue));
+  }
+  .text-accent-blue {
+    color: rgb(var(--accent-blue));
+  }
+  .border-accent-blue {
+    border-color: rgb(var(--accent-blue));
+  }
+
+  .bg-accent-purple {
+    background-color: rgb(var(--accent-purple));
+  }
+  .text-accent-purple {
+    color: rgb(var(--accent-purple));
+  }
+  .border-accent-purple {
+    border-color: rgb(var(--accent-purple));
+  }
+
+  .bg-accent-pink {
+    background-color: rgb(var(--accent-pink));
+  }
+  .text-accent-pink {
+    color: rgb(var(--accent-pink));
+  }
+  .border-accent-pink {
+    border-color: rgb(var(--accent-pink));
+  }
+
+  .bg-accent-yellow {
+    background-color: rgb(var(--accent-yellow));
+  }
+  .text-accent-yellow {
+    color: rgb(var(--accent-yellow));
+  }
+  .border-accent-yellow {
+    border-color: rgb(var(--accent-yellow));
+  }
+
+  .bg-accent-green {
+    background-color: rgb(var(--accent-green));
+  }
+  .text-accent-green {
+    color: rgb(var(--accent-green));
+  }
+  .border-accent-green {
+    border-color: rgb(var(--accent-green));
+  }
+
+  .bg-accent-orange {
+    background-color: rgb(var(--accent-orange));
+  }
+  .text-accent-orange {
+    color: rgb(var(--accent-orange));
+  }
+  .border-accent-orange {
+    border-color: rgb(var(--accent-orange));
+  }
+
+  /* Status color utilities */
+  .bg-success {
+    background-color: rgb(var(--success));
+  }
+  .text-success {
+    color: rgb(var(--success));
+  }
+  .border-success {
+    border-color: rgb(var(--success));
+  }
+
+  .bg-warning {
+    background-color: rgb(var(--warning));
+  }
+  .text-warning {
+    color: rgb(var(--warning));
+  }
+  .border-warning {
+    border-color: rgb(var(--warning));
+  }
+
+  .bg-error {
+    background-color: rgb(var(--error));
+  }
+  .text-error {
+    color: rgb(var(--error));
+  }
+  .border-error {
+    border-color: rgb(var(--error));
+  }
+
+  .bg-info {
+    background-color: rgb(var(--info));
+  }
+  .text-info {
+    color: rgb(var(--info));
+  }
+  .border-info {
+    border-color: rgb(var(--info));
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .skeleton-loading {
+    background-image: linear-gradient(
+      to right,
+      rgb(var(--border)),
+      rgb(var(--background-secondary)),
+      rgb(var(--border))
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  .glass-effect {
+    background-color: rgba(var(--surface), 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(var(--border), 0.5);
+  }
+
+  .focus-ring {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(var(--primary), 0.5),
+      0 0 0 4px rgb(var(--background));
+  }
+
+  .hover-lift {
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hover-lift:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+  }
+}
+
+img {
+  transform: scale(1.01);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(var(--foreground));
+  background-color: rgb(var(--background));
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-variation-settings: "opsz" 32;
+}
+
+/* Enhanced focus states for accessibility */
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(var(--primary), 0.5),
+    0 0 0 4px rgb(var(--background));
+}
+
+/* Print styles */
+@media print {
+  * {
+    color: #000 !important;
+    background-color: #fff !important;
+  }
+}
+
+/* Custom Prose Styles for Typography */
+@layer components {
+  .prose {
+    color: rgb(var(--foreground));
+    max-width: 65ch;
+  }
+
+  .prose h1 {
+    color: rgb(var(--foreground));
+    font-weight: 800;
+    font-size: 2.25rem;
+    margin-top: 0;
+    line-height: 1.1111111;
+  }
+
+  .prose h2 {
+    color: rgb(var(--foreground));
+    font-weight: 700;
+    font-size: 1.875rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.3333333;
+  }
+
+  .prose h3 {
+    color: rgb(var(--foreground));
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.6;
+  }
+
+  .prose h4 {
+    color: rgb(var(--foreground));
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.5;
+  }
+
+  .prose h5 {
+    color: rgb(var(--foreground));
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.5;
+  }
+
+  .prose h6 {
+    color: rgb(var(--foreground));
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.5;
+  }
+
+  .prose p {
+    margin-bottom: 0.75rem;
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+
+  .prose a {
+    color: rgb(var(--primary));
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .prose ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 0;
+  }
+
+  .prose ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 0;
+  }
+
+  .prose li {
+    margin-bottom: 0.25rem;
+    line-height: 1.75;
+    font-size: 1rem;
+    color: rgb(var(--foreground));
+  }
+
+  .prose li p {
+    margin-bottom: 0;
+  }
+
+  .prose ul ul,
+  .prose ol ol,
+  .prose ul ol,
+  .prose ol ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .prose li::marker {
+    color: rgb(var(--foreground-secondary));
+  }
+}
