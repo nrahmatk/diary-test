@@ -69,7 +69,7 @@ const HomePage = memo(function HomePage({}: HomePageProps) {
             {Array.from({ length: 6 }, (_, i) => (
               <div
                 key={`skeleton-${i}`}
-                className="p-6 animate-fade-in"
+                className="px-2 pt-4 md:px-6 animate-fade-in"
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <DiaryCardSkeleton />

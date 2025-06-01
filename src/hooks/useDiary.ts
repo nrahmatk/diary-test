@@ -9,7 +9,7 @@ export function useInfiniteDiaryFeed() {
   return useInfiniteQuery({
     queryKey: ["diary-feed"],
     queryFn: ({ pageParam = 0 }) =>
-      getDiaryFeed({ offset: (pageParam as number) * 6, limit: 6 }),
+      getDiaryFeed({ offset: (pageParam as number) * 20, limit: 20 }),
     initialPageParam: 0,
     getNextPageParam: (lastPage, pages) => {
       const totalFetched = pages.length * 6;
