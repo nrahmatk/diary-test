@@ -118,7 +118,7 @@ const DetailPage = memo(function DetailPage({}: DetailPageProps) {
       <div className="max-w-2xl mx-auto">
         {/* Content */}
         <div className="animate-fade-in">
-          <article className="px-6 pt-6 pb-8">
+          <article className="px-4 md:px-6 pt-6 pb-8">
             {/* Article Title */}
             <h1 className="text-2xl md:text-3xl font-bold text-foreground leading-tight mb-4">
               {diary.meta.title}

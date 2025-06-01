@@ -40,12 +40,6 @@ export const ThemeToggle = memo(function ThemeToggle() {
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
       </div>
-
-      {/* Tooltip */}
-      <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-surface border border-border rounded-lg text-xs text-foreground-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-medium">
-        {theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
-        <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-surface border-l border-t border-border rotate-45"></div>
-      </div>
     </button>
   );
 });

@@ -259,12 +259,6 @@
     animation: shimmer 1.5s ease-in-out infinite;
   }
 
-  .glass-effect {
-    background-color: rgba(var(--surface), 0.8);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(var(--border), 0.5);
-  }
-
   .focus-ring {
     outline: none;
     box-shadow: 0 0 0 2px rgba(var(--primary), 0.5),

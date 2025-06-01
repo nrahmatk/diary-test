@@ -2,10 +2,10 @@ import { memo } from "react";
 
 export const DiaryCardSkeleton = memo(function DiaryCardSkeleton() {
   return (
-    <div className="flex gap-4">
-      <div className="w-12 h-12 skeleton-loading rounded-2xl flex-shrink-0"></div>
+    <div className="flex gap-3 sm:gap-4">
+      <div className="w-8 h-8 md:h-10 md:w-10 skeleton-loading rounded-full flex-shrink-0"></div>
       <div className="flex-1 space-y-3">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center py-2 gap-2">
           <div className="w-20 h-4 skeleton-loading rounded-full"></div>
           <div className="w-16 h-3 skeleton-loading rounded-full"></div>
         </div>
@@ -15,10 +15,6 @@ export const DiaryCardSkeleton = memo(function DiaryCardSkeleton() {
           <div className="h-4 skeleton-loading rounded-lg w-2/3"></div>
         </div>
         <div className="h-48 skeleton-loading rounded-2xl"></div>
-        <div className="flex justify-between items-center">
-          <div className="w-24 h-4 skeleton-loading rounded-full"></div>
-          <div className="w-8 h-8 skeleton-loading rounded-full"></div>
-        </div>
       </div>
     </div>
   );
